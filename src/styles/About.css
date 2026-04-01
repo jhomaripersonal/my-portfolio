@@ -1,0 +1,62 @@
+/* About Section Styles */
+
+.about {
+  background: transparent;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.about-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3xl);
+  margin-top: var(--spacing-2xl);
+}
+
+.about-text,
+.about-objective {
+  padding: var(--spacing-2xl);
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.about-text:hover,
+.about-objective:hover {
+  border-color: var(--primary);
+  background: rgba(59, 130, 246, 0.05);
+  box-shadow: 0 10px 40px rgba(59, 130, 246, 0.15);
+}
+
+.about-text h3,
+.about-objective h3 {
+  color: var(--primary);
+  margin-bottom: var(--spacing-lg);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.about-text p,
+.about-objective p {
+  line-height: 1.8;
+  color: var(--text-secondary);
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  .about-text,
+  .about-objective {
+    padding: var(--spacing-lg);
+  }
+}

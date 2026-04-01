@@ -1,0 +1,104 @@
+/* Education Section Styles */
+
+.education {
+  background: transparent;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.education-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+  margin-top: var(--spacing-2xl);
+  position: relative;
+}
+
+.education-card {
+  padding: var(--spacing-2xl);
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  display: flex;
+  gap: var(--spacing-2xl);
+  align-items: center;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.education-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.education-card:hover {
+  border-color: var(--primary);
+  background: rgba(59, 130, 246, 0.03);
+  box-shadow: 0 10px 40px rgba(59, 130, 246, 0.15);
+}
+
+.education-card:hover::before {
+  opacity: 1;
+}
+
+.education-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.education-content {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.education-content h3 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.school {
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+}
+
+.year {
+  color: var(--text-tertiary);
+  font-size: 0.95rem;
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-md);
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .education-card {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-lg);
+  }
+
+  .education-icon {
+    font-size: 2rem;
+  }
+
+  .education-content h3 {
+    font-size: 1.1rem;
+  }
+}
